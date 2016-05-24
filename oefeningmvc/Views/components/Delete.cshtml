@@ -1,0 +1,64 @@
+﻿@model OefeningMVC.Models.component
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Verwijder</h2>
+
+<h3>Bent u zeker dit component te verwijderen?</h3>
+<div>
+    <h4>component</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Naam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Naam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categorie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categorie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Link)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Link)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.aantal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.aantal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aankoopprijs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aankoopprijs)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Verwijder" class="btn btn-default" /> |
+            @Html.ActionLink("Terug naar lijst", "Index")
+        </div>
+    }
+</div>
